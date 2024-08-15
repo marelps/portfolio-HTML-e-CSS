@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor-primaria: #000000;
-    --cor-secundaria: #F6F6F6;
-    --cor-terciaria: #22D4FD;
-    --cor-hover: #272727;
+    --cor-primaria: #171717;
+    --cor-secundaria: #858585;
+    --cor-terciaria: #DA0037;
+    --cor-hover: #EDEDED;
 
-    --fonte-primaria: 'Krona One', sans-serif;
-    --fonte-secundaria: 'Montserrat', sans-serif;
+    --fonte-primaria: "Inconsolata", monospace;
+    --fonte-secundaria: "Noto Sans", sans-serif;
 }
 
 *{
@@ -33,7 +33,7 @@ body{
 
 .cabecalho_menu_link {
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color:var(--cor-terciaria);
     text-decoration: none;
@@ -44,17 +44,18 @@ body{
     display: flex;
     align-items: center;
     justify-items: space-between;
+    gap: 82px;
 }
 
  .apresentacao_conteudo{
-    width: 625px; 
+    width: 50%; 
     display: flex;
     flex-direction: column;
     gap: 40px;  
 }
 
 .apresentacao_conteudo_titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
 
@@ -63,7 +64,7 @@ body{
 }
 
 .apresentacao_conteudo_texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
@@ -83,19 +84,19 @@ body{
 .apresentacao_links_subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;    
+    font-size: 1.5rem;    
 }
 
-.apresentacao_links_link {
+.apresentacao_links_navegacao {
     /* background-color: var(--cor-terciaria; */
     display: flex;
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -107,12 +108,26 @@ body{
     background-color: var(--cor-hover);
 }
 
+.fa-brands, .fa-solid{
+    color: var(--cor-terciaria);
+}
+
+.apresentacao_imagem{
+    width: 50%;
+}
+
 .rodape {
     padding: 24px;
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
 }
+
+@media (max-width: 1200px){
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+};
